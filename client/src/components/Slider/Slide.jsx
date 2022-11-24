@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "../Button/Button";
 
 console.clear();
 
@@ -74,7 +75,16 @@ function Slide({ slide, offset }) {
         }}
       >
         <div className="slideContentInner">
-          <h2 className="slideTitle">{slide.title}</h2>
+          <h2 className="slideTitle"><Button
+        onClick={() => {
+          console.log("You Clicked on Me!");
+        }}
+        type="button"
+        buttonStyle="btn--primary--outline"
+        buttonSize="btn--large"
+      >
+        Buy Now
+      </Button></h2>
           <h3 className="slideSubtitle">{slide.subtitle}</h3>
           <p className="slideDescription">{slide.description}</p>
         </div>
