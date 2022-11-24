@@ -28,19 +28,20 @@ $background-color_5: transparent;
 	cursor: pointer;
 	transition: transform 0.3s ease;
 
-	&:hover {
-		transform: translateY(-5px);
-		-webkit-transform: translateY(-5px);
-		-moz-transform: translateY(-5px);
-		-ms-transform: translateY(-5px);
-		-o-transform: translateY(-5px);
-	}
 
-    &--danger--solid {
-        background-color: var(--danger);
-        color: var(--white);
-        border: none;
-      }
+	&:hover {
+        transform: translateY(-5px);
+        background-color: $background-color_2;
+        color: $color_2;
+}
+
+	&--danger--solid {
+		background-color: var(--danger);
+		color: var(--white);
+		border: none;
+
+	
+	}
 
 	// &--danger--outline {
 	// 	background-color: $background-color_5;
@@ -91,14 +92,22 @@ $background-color_5: transparent;
 	// }
 
 	&--medium {
-	    padding: 10px 20px;
-	    font-size: 18px;
+		padding: 10px 20px;
+		font-size: 18px;
 	}
 
 	&--large {
-	    padding: 15px 30px;
-	    font-size: 20px;
+		padding: 15px 30px;
+		font-size: 20px;
 	}
+}
+
+#checkMark {
+	position: absolute;
+	top: 20%;
+	left: 37%;
+	font-size: 1.5em;
+	opacity: 0;
 }
 
 @keyframes extend {

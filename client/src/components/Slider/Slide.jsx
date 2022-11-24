@@ -82,7 +82,7 @@ function Slide({ slide, offset }) {
 							buttonStyle="btn--danger--solid"
 							buttonSize="btn--large"
 						>
-							Like
+							<span>Like</span>
 							<FaCheckCircle id="checkMark"/>
 						</Button>
 					<h3 className="slideSubtitle">{slide.subtitle}</h3>
