@@ -75,7 +75,6 @@ function Slide({ slide, offset }) {
 				<div className="slideContentInner">
 				
 						<Button
-            className="slideTitle"
 							onClick={() => {
 								console.log("You Clicked on Me!");
 							}}

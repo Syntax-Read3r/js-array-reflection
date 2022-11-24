@@ -1,7 +1,7 @@
 import React from 'react'
 import Slide from './components/Slider/Slide'
-import './styles/css/reset.css'
 import '@csstools/normalize.css';
+import './styles/css/reset.css'
 import './styles/css/main.css'
 
 
