@@ -17,68 +17,145 @@
   cursor: pointer;
   transition: transform 0.3s ease;
 }
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  z-index: -1;
+  background-color: var(--primary);
+}
 .btn:hover {
   transform: translateY(-3px);
 }
-
-.btn--primary--solid {
-  background-color: var(--primary);
-  color: var(--white);
-  border: none;
-}
-
-.btn--warning--solid {
-  background-color: var(--warning);
-  color: var(--dark);
-  border: none;
-}
-
-.btn--danger--solid {
-  background-color: var(--danger);
-  color: var(--white);
-  border: none;
-}
-
-.btn--success--solid {
-  background-color: var(--success);
-  color: var(--white);
-  border: none;
-}
-
-.btn--primary--outline {
-  background-color: transparent;
-  border: 2px solid var(--primary);
-  color: var(--primary);
-}
-
-.btn--warning--outline {
-  background-color: transparent;
-  border: 2px solid var(--warning);
-  color: var(--warning);
-}
-
 .btn--danger--outline {
   background-color: transparent;
   border: 2px solid var(--danger);
   color: var(--danger);
 }
 
-.btn--success--outline {
-  background-color: transparent;
-  border: 2px solid var(--success);
-  color: var(--success);
+#checkMark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  z-index: -1;
+  background-color: var(--success);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.btn--medium {
-  padding: 10px 20px;
-  font-size: 18px;
+@keyframes extend {
+  0% {
+    width: 500px;
+    height: 150px;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+  }
+  10% {
+    width: 500px;
+    height: 150px;
+    background-color: #bdf5ba;
+  }
+  20% {
+    width: 500px;
+    height: 150px;
+    background-color: #71f95f;
+  }
+  100% {
+    width: 500px;
+    height: 150px;
+    background-color: #55f524;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+  }
 }
-
-.btn--large {
-  padding: 15px 30px;
-  font-size: 20px;
+@-webkit-keyframes extend {
+  0% {
+    width: 500px;
+    height: 150px;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+  }
+  10% {
+    width: 500px;
+    height: 150px;
+    background-color: #bdf5ba;
+  }
+  20% {
+    width: 500px;
+    height: 150px;
+    background-color: #71f95f;
+  }
+  100% {
+    width: 500px;
+    height: 150px;
+    background-color: #55f524;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+  }
 }
-
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    color: #71f95f;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    color: #71f95f;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 *,
 *::before,
 *::after {
@@ -128,6 +205,7 @@ body {
   transition: opacity 0.3s;
   opacity: 0.7;
   z-index: 5;
+  cursor: pointer;
 }
 .slides > button:hover {
   opacity: 1;
@@ -210,6 +288,16 @@ body {
   --x: calc(var(--px) - 0.5);
   --y: calc(var(--py) - 0.5);
   opacity: 1;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  box-shadow: 0 0 2000rem rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0 0 2000rem rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 0 2000rem rgba(0, 0, 0, 0.7);
+  -ms-box-shadow: 0 0 2000rem rgba(0, 0, 0, 0.7);
+  -o-box-shadow: 0 0 2000rem rgba(0, 0, 0, 0.7);
   transform: perspective(1000px);
 }
 .slide[data-active] .slideContent:hover {

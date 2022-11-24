@@ -1,0 +1,227 @@
+$color_1: var(--white);
+$color_2: var(--dark);
+$color_3: var(--primary);
+$color_4: var(--warning);
+$color_5: var(--danger);
+$color_6: var(--success);
+$font-family_1: "Roboto", sans-serif;
+$background-color_1: var(--primary);
+$background-color_2: var(--warning);
+$background-color_3: var(--danger);
+$background-color_4: var(--success);
+$background-color_5: transparent;
+
+/* Button Colors and Styles */
+/* Button Size */
+:root {
+	--primary: #39A9DB;
+	--warning: #F9DC5C;
+	--danger: #E84855;
+	--success: #ABE188;
+	--white: #fdfdfd;
+	--dark: #181717;
+}
+.btn {
+	font-family: $font-family_1;
+	font-weight: 400;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: transform 0.3s ease;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        z-index: -1;
+        background-color: $background-color_1;
+    }
+
+	&:hover {
+		transform: translateY(-3px);
+	}
+
+    &--danger--outline {
+        background-color: $background-color_5;
+        border: 2px solid var(--danger);
+        color: $color_5;
+
+        }
+    
+
+    // &--primary--solid {
+    //     background-color: $background-color_1;
+    //     color: $color_1;
+    //     border: none;
+    // }
+
+    // &--warning--solid {
+    //     background-color: $background-color_2;
+    //     color: $color_2;
+    //     border: none;
+    // }
+
+    // &--danger--solid {
+    //     background-color: $background-color_3;
+    //     color: $color_1;
+    //     border: none;
+    // }
+
+    // &--success--solid {
+    //     background-color: $background-color_4;
+    //     color: $color_1;
+    //     border: none;
+    // }
+
+    // &--primary--outline {
+    //     background-color: $background-color_5;
+    //     border: 2px solid var(--primary);
+    //     color: $color_3;
+    // }
+
+    // &--warning--outline {
+    //     background-color: $background-color_5;
+    //     border: 2px solid var(--warning);
+    //     color: $color_4;
+    // }
+
+
+
+    // &--success--outline {
+    //     background-color: $background-color_5;
+    //     border: 2px solid var(--success);
+    //     color: $color_6;
+    // }
+
+    // &--medium {
+    //     padding: 10px 20px;
+    //     font-size: 18px;
+    // }
+
+    // &--large {
+    //     padding: 15px 30px;
+    //     font-size: 20px;
+    // }
+}
+
+#checkMark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    z-index: -1;
+    background-color: var(--success);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+
+@keyframes extend {
+    0% {
+        width: 500px;
+        height: 150px;
+        border-radius: 100px;
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+        -ms-border-radius: 100px;
+        -o-border-radius: 100px;
+} 10% {
+    width: 500px;
+    height: 150px;
+    background-color: #bdf5ba;
+} 20% {
+    width: 500px;
+    height: 150px;
+    background-color: #71f95f;
+
+} 100% {
+    width: 500px;
+    height: 150px;
+    background-color: #55f524;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+}
+}
+
+
+@-webkit-keyframes extend {
+    0% {
+        width: 500px;
+        height: 150px;
+        border-radius: 100px;
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+        -ms-border-radius: 100px;
+        -o-border-radius: 100px;
+} 10% {
+    width: 500px;
+    height: 150px;
+    background-color: #bdf5ba;
+} 20% {
+    width: 500px;
+    height: 150px;
+    background-color: #71f95f;
+
+} 100% {
+    width: 500px;
+    height: 150px;
+    background-color: #55f524;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+}
+}
+
+@keyframes disappear {
+    0% {
+        opacity: 1;
+    } 20% {
+        color:  #71f95f;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes disappear {
+    0% {
+        opacity: 1;
+    } 20% {
+        color:  #71f95f;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    } 70% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes appear {
+    0% {
+        opacity: 0;
+    } 70% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
