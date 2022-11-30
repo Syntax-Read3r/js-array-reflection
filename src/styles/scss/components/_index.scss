@@ -1,0 +1,19 @@
+@media (max-width: 576px) {
+    #emailCollection {
+        display: block;
+    }
+}
+
+.imageWrapper {
+    margin: 20px;
+
+    & img {
+        width: 100%;
+        border-radius: 5%;
+        -webkit-border-radius: 5%;
+        -moz-border-radius: 5%;
+        -ms-border-radius: 5%;
+        -o-border-radius: 5%;
+        box-shadow: 0 0 20px #000000, 0 0 80px #000000, 0 0 160px #000000;
+}
+}
