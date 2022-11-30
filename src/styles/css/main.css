@@ -53,6 +53,8 @@ body {
 }
 .container .col {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 @media (max-width: 576px) {
