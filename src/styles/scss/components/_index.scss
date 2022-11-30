@@ -22,9 +22,9 @@
 
 #formWrapper {
 	margin: 20px;
-	display: flex;
+	display: flex !important;
 	font-size: 1.5rem;
-    justify-content: center;
+	justify-content: center !important;
 	// add a inward effect on the form
 
 	& input {
@@ -41,7 +41,46 @@
 		border-radius: 5px;
 		border: 1px solid #000000;
 		font-size: 1.5rem;
-
-    
 	}
+}
+
+// footer
+
+.imageListWrapper {
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid #000000;
+	font-size: 1.5rem;
+
+	& select {
+		margin: 10px;
+		padding: 10px;
+		border-radius: 5px;
+		border: 1px solid #000000;
+		font-size: 1.5rem;
+
+		//change the border radius of the option box
+		& option {
+			border-radius: 1px;
+			-webkit-border-radius: 1px;
+			-moz-border-radius: 1px;
+			-ms-border-radius: 1px;
+			-o-border-radius: 1px;
+            // change the color of the option box
+            &:hover {
+                background-color: #000000;
+                color: #ffffff;
+            }
+		}
+	}
+
+    & >img {
+        width: 100%;
+        border-radius: 3%;
+        -webkit-border-radius: 3%;
+        -moz-border-radius: 3%;
+        -ms-border-radius: 3%;
+        -o-border-radius: 3%;
+        box-shadow: rgb(56, 54, 54) 1px 0px 5px 1px;
+}
 }

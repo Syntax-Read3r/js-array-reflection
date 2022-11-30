@@ -1,43 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap");
-@media (max-width: 576px) {
-  #emailCollection {
-    display: block;
-  }
-}
-.imageWrapper {
-  margin: 20px;
-}
-.imageWrapper img {
-  width: 100%;
-  border-radius: 5%;
-  -webkit-border-radius: 5%;
-  -moz-border-radius: 5%;
-  -ms-border-radius: 5%;
-  -o-border-radius: 5%;
-  box-shadow: 0 0 20px #000000, 0 0 80px #000000, 0 0 160px #000000;
-}
-
-#formWrapper {
-  margin: 20px;
-  display: flex;
-  font-size: 1.5rem;
-  justify-content: center;
-}
-#formWrapper input {
-  margin: 10px;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #000000;
-  font-size: 1.5rem;
-}
-#formWrapper button {
-  margin: 10px;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #000000;
-  font-size: 1.5rem;
-}
-
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
@@ -92,4 +53,77 @@ body {
 }
 .container .col {
   display: flex;
+}
+
+@media (max-width: 576px) {
+  #emailCollection {
+    display: block;
+  }
+}
+.imageWrapper {
+  margin: 20px;
+}
+.imageWrapper img {
+  width: 100%;
+  border-radius: 5%;
+  -webkit-border-radius: 5%;
+  -moz-border-radius: 5%;
+  -ms-border-radius: 5%;
+  -o-border-radius: 5%;
+  box-shadow: 0 0 20px #000000, 0 0 80px #000000, 0 0 160px #000000;
+}
+
+#formWrapper {
+  margin: 20px;
+  display: flex !important;
+  font-size: 1.5rem;
+  justify-content: center !important;
+}
+#formWrapper input {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #000000;
+  font-size: 1.5rem;
+}
+#formWrapper button {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #000000;
+  font-size: 1.5rem;
+}
+
+.imageListWrapper {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #000000;
+  font-size: 1.5rem;
+}
+.imageListWrapper select {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #000000;
+  font-size: 1.5rem;
+}
+.imageListWrapper select option {
+  border-radius: 1px;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
+}
+.imageListWrapper select option:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+.imageListWrapper > img {
+  width: 100%;
+  border-radius: 3%;
+  -webkit-border-radius: 3%;
+  -moz-border-radius: 3%;
+  -ms-border-radius: 3%;
+  -o-border-radius: 3%;
+  box-shadow: rgb(56, 54, 54) 1px 0px 5px 1px;
 }/*# sourceMappingURL=main.css.map */
