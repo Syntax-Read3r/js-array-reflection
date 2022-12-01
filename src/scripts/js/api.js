@@ -6,6 +6,7 @@ const newImage = document.querySelector('#newImage');
 const saveImage = document.querySelector('#saveImage');
 const savedProfiles = document.querySelector('#savedProfiles');
 const imageListContainer = document.querySelector(".imageListContainer");
+const likedImagedDisplay = document.querySelector('.row');
 
 
 document.addEventListener("DOMContentLoaded", function() { 
@@ -13,22 +14,26 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
 let savedProfilesStorage = [];
-let url = mainImage.src;
+let url;;
+console.log(savedProfilesStorage);
 let activeSelect = 0;
 
 
-
+// Fetches image from API
 const fetchImage = async () => {
   try {
     const response = await fetch(src);
-    const blob = await response.blob();
-    const url = URL.createObjectURL(blob);
-    mainImage.src = url;
+    const data = await response.url;
+    console.log(data);
+
+    mainImage.src = data;
+    url = data;
   } catch (error) {
     console.log(error);
   }
 };
 
+// Searches for email in temporary storage
 function search(email) {
     for (var i = 0, len = savedProfilesStorage.length; i < len; i++) {
         if (savedProfilesStorage[i][0] === email) {
@@ -37,7 +42,7 @@ function search(email) {
     }
 }
 
-// create a function that validates and email and if true, adds the email and url to the savedProfiles array
+// Saves image to temporary storage
 const validateEmail = () => {
     email = document.forms['emailCollection']['email'].value;
     console.log(email);
@@ -61,30 +66,30 @@ const validateEmail = () => {
         fetchImage();
     }
     displayImage();
-    console.log(savedProfiles.value)
     console.log('i am here')
 
 }
 
-// create a function that displays the image associated with the email 
-
+// Displays image associated with email/profile
 const displayImage = () => {
     if(savedProfiles.value == "default") {
         // clear the div
-        imageListContainer.innerHTML = "";
+        likedImagedDisplay.innerHTML = "";
     } else if (savedProfiles.value) {
         // clear the div
-        imageListContainer.innerHTML = "";
+        likedImagedDisplay.innerHTML = "";
         // get the index of the email
         savedLocation = savedProfiles.value;
      
-        // get the array of urls associated with the email
+        // get the array of urls associated with the email 
         savedUrls = savedProfilesStorage[savedLocation].slice(1);
+        console.log(savedUrls);
         // loop through the array of urls and display them
         for (i = 0; i < savedUrls.length; i++) {
             var img = document.createElement("img");
             img.src = savedUrls[i];
-            imageListContainer.appendChild(img);
+            img.className = "likedImage";
+            likedImagedDisplay.appendChild(img);
         }
     }
 
@@ -97,5 +102,6 @@ mainImage.addEventListener('click', fetchImage);
 saveImage.addEventListener('click', () => {
     validateEmail(email);
 });
+savedProfiles.addEventListener('change', displayImage);
 
 

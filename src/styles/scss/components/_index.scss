@@ -66,21 +66,24 @@
 			-moz-border-radius: 1px;
 			-ms-border-radius: 1px;
 			-o-border-radius: 1px;
-            // change the color of the option box
-            &:hover {
-                background-color: #000000;
-                color: #ffffff;
-            }
+			// change the color of the option box
+			&:hover {
+				background-color: #000000;
+				color: #ffffff;
+			}
 		}
 	}
 
-    & >img {
-        width: 100%;
-        border-radius: 3%;
-        -webkit-border-radius: 3%;
-        -moz-border-radius: 3%;
-        -ms-border-radius: 3%;
-        -o-border-radius: 3%;
-        box-shadow: rgb(56, 54, 54) 1px 0px 5px 1px;
-}
+	& > .imageListContainer {
+		> .row {
+			> .col {
+				> .likedImage {
+					margin: 5px;
+					padding: 5px;
+					border-radius: 5px;
+					box-shadow: rgb(56, 54, 54) 1px 0px 5px 1px;
+				}
+			}
+		}
+	}
 }

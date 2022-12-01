@@ -121,12 +121,9 @@ body {
   background-color: #000000;
   color: #ffffff;
 }
-.imageListWrapper > img {
-  width: 100%;
-  border-radius: 3%;
-  -webkit-border-radius: 3%;
-  -moz-border-radius: 3%;
-  -ms-border-radius: 3%;
-  -o-border-radius: 3%;
+.imageListWrapper > .imageListContainer > .row > .col > .likedImage {
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
   box-shadow: rgb(56, 54, 54) 1px 0px 5px 1px;
 }/*# sourceMappingURL=main.css.map */
