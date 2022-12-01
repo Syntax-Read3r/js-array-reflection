@@ -5,6 +5,7 @@ const mainImage = document.querySelector('.mainImage');
 const newImage = document.querySelector('#newImage');
 const saveImage = document.querySelector('#saveImage');
 const savedProfiles = document.querySelector('#savedProfiles');
+const imageListContainer = document.querySelector(".imageListContainer");
 
 
 document.addEventListener("DOMContentLoaded", function() { 
@@ -13,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 let savedProfilesStorage = [];
 let url = mainImage.src;
-let a = 0;
+let activeSelect = 0;
 
 
 
@@ -50,15 +51,43 @@ const validateEmail = () => {
 
         var option = document.createElement("option");
         option.text = email;
-        option.value = a;
+        option.value = activeSelect;
         savedProfiles.appendChild(option);
         fetchImage();
-        a++;
+        activeSelect++;
     } else if (search(email)) {
         savedLocation = savedProfilesStorage.findIndex(item => item.includes(email));
         savedProfilesStorage[savedLocation].push(url);
         fetchImage();
     }
+    displayImage();
+    console.log(savedProfiles.value)
+    console.log('i am here')
+
+}
+
+// create a function that displays the image associated with the email 
+
+const displayImage = () => {
+    if(savedProfiles.value == "default") {
+        // clear the div
+        imageListContainer.innerHTML = "";
+    } else if (savedProfiles.value) {
+        // clear the div
+        imageListContainer.innerHTML = "";
+        // get the index of the email
+        savedLocation = savedProfiles.value;
+     
+        // get the array of urls associated with the email
+        savedUrls = savedProfilesStorage[savedLocation].slice(1);
+        // loop through the array of urls and display them
+        for (i = 0; i < savedUrls.length; i++) {
+            var img = document.createElement("img");
+            img.src = savedUrls[i];
+            imageListContainer.appendChild(img);
+        }
+    }
+
 }
 
 
