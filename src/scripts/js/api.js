@@ -6,7 +6,7 @@ const newImage = document.querySelector('#newImage');
 const saveImage = document.querySelector('#saveImage');
 const savedProfiles = document.querySelector('#savedProfiles');
 const imageListContainer = document.querySelector(".imageListContainer");
-const likedImagedDisplay = document.querySelector('.row');
+const likedImageDisplay = document.querySelector('.row');
 
 
 document.addEventListener("DOMContentLoaded", function() { 
@@ -74,10 +74,10 @@ const validateEmail = () => {
 const displayImage = () => {
     if(savedProfiles.value == "default") {
         // clear the div
-        likedImagedDisplay.innerHTML = "";
-    } else if (savedProfiles.value) {
+        likedImageDisplay.innerHTML = "";
+    } else if (savedProfiles.value != "default") {
         // clear the div
-        likedImagedDisplay.innerHTML = "";
+        likedImageDisplay.innerHTML = "";
         // get the index of the email
         savedLocation = savedProfiles.value;
      
@@ -89,7 +89,7 @@ const displayImage = () => {
             var img = document.createElement("img");
             img.src = savedUrls[i];
             img.className = "likedImage";
-            likedImagedDisplay.appendChild(img);
+            likedImageDisplay.appendChild(img);
         }
     }
 
